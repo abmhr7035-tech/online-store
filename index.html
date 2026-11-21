@@ -3,91 +3,203 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>متجر المنتجات</title>
+<meta name="description" content="مجمع أبي أيوب الأنصاري لتحفيظ القرآن الكريم وعلومه في أنجمينا، تشاد">
+<title>مجمع أبي أيوب الأنصاري لتحفيظ القرآن الكريم وعلومه</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial;background:#f4f5f7;color:#222}
-header{background:#142b45;color:white;text-align:center;padding:22px}
-header h1{margin:0}
-.container{max-width:900px;margin:auto;padding:15px}
-video{width:100%;border-radius:12px;background:#222}
-h2{text-align:center;color:#142b45}
-.products{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.product{background:white;padding:10px;border-radius:12px;text-align:center}
-.product img{width:100%;height:150px;object-fit:cover;border-radius:8px}
-.price{color:#087d45;font-weight:bold}
-button{background:#087d45;color:white;border:0;padding:12px;border-radius:8px;width:100%;font-size:16px}
-input,textarea{width:100%;padding:13px;margin:7px 0;border:1px solid #ccc;border-radius:8px;font-size:16px}
-form{background:white;padding:15px;border-radius:12px}
-footer{text-align:center;background:#142b45;color:white;padding:20px;margin-top:25px}
-@media(max-width:400px){.products{grid-template-columns:1fr}}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,sans-serif;background:#f5f7f2;color:#26352b;line-height:1.9}
+header{background:linear-gradient(135deg,#103d2b,#21845b);color:white;text-align:center;padding:45px 15px}
+header h1{font-size:27px;margin:0}
+header p{margin:8px 0}
+nav{background:#0d3023;text-align:center;padding:12px;position:sticky;top:0;z-index:10}
+nav a{color:white;text-decoration:none;margin:7px;font-size:14px;display:inline-block}
+.container{max-width:1000px;margin:auto;padding:18px}
+section{background:white;padding:22px;margin:20px 0;border-radius:13px;box-shadow:0 2px 9px #00000010}
+h2{color:#176747;border-bottom:2px solid #e1eee5;padding-bottom:8px}
+.hero{text-align:center;background:#e4f1e8;padding:35px 15px;border-radius:12px}
+.info{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.box{background:#edf5ef;padding:15px;border-radius:10px;text-align:center}
+.btn{display:inline-block;background:#176747;color:white;padding:10px 18px;border-radius:8px;text-decoration:none;margin:5px}
+.contact{background:#edf5ef;padding:14px;border-radius:9px;margin:12px 0}
+label{display:block;margin-top:10px}
+input,textarea,select{width:100%;padding:12px;margin:5px 0;border:1px solid #ccc;border-radius:8px;font:inherit}
+button{font:inherit}
+footer{background:#103d2b;color:white;text-align:center;padding:25px;margin-top:25px}
+ul{padding-right:25px}
+.notice{background:#fff8df;padding:12px;border-radius:8px}
+@media(max-width:500px){header h1{font-size:22px}nav a{font-size:13px}}
 </style>
 </head>
 <body>
 
 <header>
-<h1>مرحباً بكم في متجرنا</h1>
-<p>أفضل المنتجات بأسعار مناسبة</p>
+<h1>مجمع أبي أيوب الأنصاري</h1>
+<p>لتحفيظ القرآن الكريم وعلومه</p>
+<p>أنجمينا – تشاد</p>
 </header>
 
-<div class="container">
+<nav>
+<a href="#about">عن المجمع</a>
+<a href="#history">التاريخ</a>
+<a href="#study">الدراسة</a>
+<a href="#staff">الإدارة والمعلمون</a>
+<a href="#activities">الأنشطة</a>
+<a href="#location">الموقع</a>
+<a href="#contact">التواصل</a>
+<a href="#register">التسجيل</a>
+</nav>
 
-<h2>🎬 الفيديو الإعلاني</h2>
-<video controls playsinline>
-<source src="videos/ad.mp4" type="video/mp4">
-متصفحك لا يدعم الفيديو.
-</video>
+<main class="container">
 
-<h2>🛍️ منتجاتنا</h2>
-
-<div class="products">
-
-<div class="product">
-<img src="images/product1.jpg" alt="الحذاء الأول">
-<h3>الحذاء الأول</h3>
-<p class="price">السعر: 10000 فرنك</p>
-<button onclick="order('الحذاء الأول','10000 فرنك')">اطلب الآن</button>
+<div class="hero">
+<h2>أهلاً وسهلاً بكم في مجمع أبي أيوب الأنصاري</h2>
+<p>صرح تعليمي يُعنى بتحفيظ القرآن الكريم وتعليم علومه والعلوم الشرعية.</p>
 </div>
 
-<div class="product">
-<img src="images/product2.jpg" alt="الملابس">
-<h3>الملابس</h3>
-<p class="price">السعر: 8000 فرنك</p>
-<button onclick="order('الملابس','8000 فرنك')">اطلب الآن</button>
+<section id="about">
+<h2>التعريف بالمجمع</h2>
+<div class="info">
+<div class="box"><strong>سنة التأسيس</strong><br>2013م</div>
+<div class="box"><strong>عدد الطلاب</strong><br>أكثر من 130 طالباً تقريباً</div>
+<div class="box"><strong>الفصول</strong><br>9 فصول للبنين</div>
+<div class="box"><strong>الأقسام</strong><br>قسم البنين وقسم البنات</div>
 </div>
+</section>
 
+<section id="history">
+<h2>تاريخ المجمع ومؤسسه</h2>
+<p>تأسس مجمع أبي أيوب الأنصاري سنة 2013م على يد الشيخ يوسف طاهر عيسى.</p>
+<p>حفظ الشيخ يوسف طاهر عيسى القرآن الكريم في البادية، ونشأ وترعرع هناك، ثم انتقل إلى مدينة مندو، واشتغل بتعليم القرآن الكريم هناك وفي البادية.</p>
+<p>وبعد ذلك عاد إلى العاصمة أنجمينا، وافتتح الخلوة بأربعة طلاب فقط.</p>
+<p>وقد تخرج على يديه أكثر من 200 طالب وطالبة، بحسب المعلومات المقدمة عن المجمع.</p>
+</section>
+
+<section id="study">
+<h2>النظام التعليمي</h2>
+<ul>
+<li>خمسة مستويات دراسية.</li>
+<li>تسعة كتب.</li>
+<li>كتب الصحاح الحديثية.</li>
+<li>تحفيظ القرآن الكريم وتعليم التجويد.</li>
+</ul>
+<h3>أوقات الدراسة</h3>
+<div class="info">
+<div class="box"><strong>الفترة الصباحية</strong><br>7:00 – 11:00 صباحاً</div>
+<div class="box"><strong>الفترة المسائية</strong><br>2:00 – 5:00 مساءً</div>
 </div>
+<p><strong>أيام الدراسة:</strong> السبت إلى الأربعاء.</p>
+<p><strong>الإجازة:</strong> الخميس والجمعة.</p>
+</section>
 
-<h2>📝 طلب المنتج</h2>
+<section id="staff">
+<h2>الإدارة</h2>
+<ul>
+<li>المدير العام: الشيخ يوسف طاهر عيسى.</li>
+<li>نائب المدير العام: محمد بن محمد نور إسحاق.</li>
+</ul>
+<h2>المعلمون</h2>
+<ul>
+<li>إبراهيم علي أحمد.</li>
+<li>أحمد محمد نور.</li>
+<li>عمر صالح.</li>
+</ul>
+</section>
 
-<form id="orderForm">
-<input id="name" placeholder="الاسم الكامل" required>
-<input id="phone" type="tel" placeholder="رقم الهاتف" required>
-<input id="product" placeholder="اسم المنتج" readonly required>
-<input id="price" placeholder="السعر" readonly>
-<input id="quantity" type="number" min="1" value="1" required>
-<textarea id="address" placeholder="عنوانك بالتفصيل" required></textarea>
-<button type="submit">إرسال الطلب</button>
-<p id="message"></p>
+<section id="activities">
+<h2>الأنشطة والبرامج</h2>
+<ul>
+<li>مسابقات حفظ القرآن الكريم.</li>
+<li>تعليم التجويد.</li>
+<li>تكريم الطلاب المتفوقين.</li>
+<li>الاحتفال بالطلاب الذين يختمون القرآن الكريم.</li>
+</ul>
+</section>
+
+<section id="location">
+<h2>موقع المجمع</h2>
+<p>الدولة: تشاد.</p>
+<p>المدينة: أنجمينا.</p>
+<p>الحي: أنقوبو.</p>
+<p>الشارع: شارع أربعين متر.</p>
+<p>يقع المجمع بالقرب من محطة وقود.</p>
+</section>
+
+<section id="contact">
+<h2>التواصل والاستفسار</h2>
+<div class="contact">
+<strong>للتواصل أولاً:</strong><br>
+<a class="btn" href="tel:+23590302560">اتصال: 90302560</a>
+</div>
+<div class="contact">
+<strong>للتواصل مع المدير:</strong><br>
+<a class="btn" href="tel:+23599871645">اتصال: 99871645</a>
+</div>
+</section>
+
+<section id="register">
+<h2>التسجيل الإلكتروني – قسم البنين</h2>
+<p>يمكن لولي الأمر تعبئة البيانات التالية لإرسال طلب تسجيل عبر واتساب.</p>
+<p class="notice">هذا النموذج يفتح رسالة واتساب ولا يحفظ الطلبات في قاعدة بيانات.</p>
+
+<form onsubmit="sendRegistration(event)">
+<label for="student">اسم الطالب</label>
+<input id="student" required>
+
+<label for="father">اسم الأب</label>
+<input id="father" required>
+
+<label for="age">العمر</label>
+<input id="age" type="number" min="4" max="100" required>
+
+<label for="phone">رقم هاتف ولي الأمر</label>
+<input id="phone" type="tel" required>
+
+<label for="address">مكان السكن</label>
+<input id="address">
+
+<label for="level">المستوى الدراسي</label>
+<input id="level">
+
+<label for="memorization">مقدار الحفظ السابق</label>
+<textarea id="memorization" rows="3"></textarea>
+
+<label for="notes">ملاحظات</label>
+<textarea id="notes" rows="3"></textarea>
+
+<button type="submit" class="btn" style="border:0;cursor:pointer">إرسال طلب التسجيل عبر واتساب</button>
 </form>
+</section>
 
-</div>
+</main>
 
 <footer>
-<p>شكراً لزيارتكم متجرنا</p>
+<p>مجمع أبي أيوب الأنصاري لتحفيظ القرآن الكريم وعلومه</p>
+<p>أنجمينا – تشاد</p>
+<p>جميع الحقوق محفوظة ©</p>
+<p>تصميم وتطوير: بحرأمة 🌊</p>
 </footer>
 
 <script>
-function order(name,price){
-document.getElementById('product').value=name;
-document.getElementById('price').value=price;
-document.getElementById('orderForm').scrollIntoView({behavior:'smooth'});
-}
-document.getElementById('orderForm').addEventListener('submit',function(e){
-e.preventDefault();
-document.getElementById('message').textContent=
-'واجهة الطلب جاهزة، وسيتم تفعيل حفظ الطلبات بعد ربط قاعدة البيانات.';
+function sendRegistration(event){
+event.preventDefault();
+const fields=[
+["اسم الطالب","student"],
+["اسم الأب","father"],
+["العمر","age"],
+["هاتف ولي الأمر","phone"],
+["مكان السكن","address"],
+["المستوى الدراسي","level"],
+["الحفظ السابق","memorization"],
+["ملاحظات","notes"]
+];
+let message="طلب تسجيل جديد في مجمع أبي أيوب الأنصاري\n\n";
+fields.forEach(function(item){
+message+=item[0]+": "+document.getElementById(item[1]).value+"\n";
 });
+const number="23590302560";
+window.open("https://wa.me/"+number+"?text="+encodeURIComponent(message),"_blank");
+}
 </script>
 
 </body>
