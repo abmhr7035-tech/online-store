@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>متجر المنتجات</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial;background:#f4f5f7;color:#222}
+header{background:#142b45;color:white;text-align:center;padding:22px}
+header h1{margin:0}
+.container{max-width:900px;margin:auto;padding:15px}
+video{width:100%;border-radius:12px;background:#222}
+h2{text-align:center;color:#142b45}
+.products{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.product{background:white;padding:10px;border-radius:12px;text-align:center}
+.product img{width:100%;height:150px;object-fit:cover;border-radius:8px}
+.price{color:#087d45;font-weight:bold}
+button{background:#087d45;color:white;border:0;padding:12px;border-radius:8px;width:100%;font-size:16px}
+input,textarea{width:100%;padding:13px;margin:7px 0;border:1px solid #ccc;border-radius:8px;font-size:16px}
+form{background:white;padding:15px;border-radius:12px}
+footer{text-align:center;background:#142b45;color:white;padding:20px;margin-top:25px}
+@media(max-width:400px){.products{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+<h1>مرحباً بكم في متجرنا</h1>
+<p>أفضل المنتجات بأسعار مناسبة</p>
+</header>
+
+<div class="container">
+
+<h2>🎬 الفيديو الإعلاني</h2>
+<video controls playsinline>
+<source src="videos/ad.mp4" type="video/mp4">
+متصفحك لا يدعم الفيديو.
+</video>
+
+<h2>🛍️ منتجاتنا</h2>
+
+<div class="products">
+
+<div class="product">
+<img src="images/product1.jpg" alt="الحذاء الأول">
+<h3>الحذاء الأول</h3>
+<p class="price">السعر: 10000 فرنك</p>
+<button onclick="order('الحذاء الأول','10000 فرنك')">اطلب الآن</button>
+</div>
+
+<div class="product">
+<img src="images/product2.jpg" alt="الملابس">
+<h3>الملابس</h3>
+<p class="price">السعر: 8000 فرنك</p>
+<button onclick="order('الملابس','8000 فرنك')">اطلب الآن</button>
+</div>
+
+</div>
+
+<h2>📝 طلب المنتج</h2>
+
+<form id="orderForm">
+<input id="name" placeholder="الاسم الكامل" required>
+<input id="phone" type="tel" placeholder="رقم الهاتف" required>
+<input id="product" placeholder="اسم المنتج" readonly required>
+<input id="price" placeholder="السعر" readonly>
+<input id="quantity" type="number" min="1" value="1" required>
+<textarea id="address" placeholder="عنوانك بالتفصيل" required></textarea>
+<button type="submit">إرسال الطلب</button>
+<p id="message"></p>
+</form>
+
+</div>
+
+<footer>
+<p>شكراً لزيارتكم متجرنا</p>
+</footer>
+
+<script>
+function order(name,price){
+document.getElementById('product').value=name;
+document.getElementById('price').value=price;
+document.getElementById('orderForm').scrollIntoView({behavior:'smooth'});
+}
+document.getElementById('orderForm').addEventListener('submit',function(e){
+e.preventDefault();
+document.getElementById('message').textContent=
+'واجهة الطلب جاهزة، وسيتم تفعيل حفظ الطلبات بعد ربط قاعدة البيانات.';
+});
+</script>
+
+</body>
+</html>
